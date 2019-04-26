@@ -11,7 +11,8 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCREUKXnM-4i7vHiC6BZNXMZXzHsLtSkEQ'
+      apiKey: 'AIzaSyCREUKXnM-4i7vHiC6BZNXMZXzHsLtSkEQ',
+      libraries: ['drawing']
     })
   ],
   providers: [],

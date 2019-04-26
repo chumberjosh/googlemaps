@@ -1,3 +1,12 @@
-<agm-map [zoom] ="6" [latitude]="latitude" [longitude]="longitude"> <!-- (click)="polygonClick($event)" -->
- <agm-marker [latitude]="latitude" [longitude]="longitude" ></agm-marker>
+<agm-map 
+[zoom] ="6" 
+[latitude]="latitude" 
+[longitude]="longitude"
+(mapReady)="onMapReady($event)">
+<!-- (mapClick)="mapClicked($event)"> -->
+ <agm-marker 
+ *ngFor="let m of markers; let i = index"
+ [latitude]="latitude"
+ [longitude]="longitude" ></agm-marker>
 </agm-map>
+
